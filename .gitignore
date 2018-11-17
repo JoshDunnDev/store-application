@@ -1,3 +1,6 @@
 app/wwwroot
 */node_modules
 npm-debug.log
+api/store-env
+*.pyc
+__pycache__
