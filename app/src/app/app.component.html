@@ -2,7 +2,7 @@
   <div id="main-nav">
     <div class="nav-bar">
       <div class="nav-items">
-        <h1 class="app-title">SHOP</h1>
+        <a routerLink="/store" class="app-title">Store</a>
         <input class="search-bar" type="text" placeholder="Search.."/>
         <div class="nav-buttons">
           <div class="sign-in-button">
@@ -19,96 +19,14 @@
   <div id="sub-nav">
     <div class="sub-nav-bar">
       <div class="sub-nav-items">
-        <h1 class="category-nav">T-Shirts</h1>
-        <h1 class="category-nav">Jackets</h1>
-        <h1 class="category-nav">Shorts</h1>
-        <h1 class="category-nav">Pants</h1>
+        <a routerLink="/store/t-shirts" routerLinkActive="selected" class="category-nav t-shirts-button">T-Shirts</a>
+        <a routerLink="/store/jackets" routerLinkActive="selected" class="category-nav jackets-button">Jackets</a>
+        <a routerLink="/store/shorts" routerLinkActive="selected" class="category-nav shorts-button">Shorts</a>
+        <a routerLink="/store/pants" routerLinkActive="selected" class="category-nav pants-button">Pants</a>
       </div>
     </div>
   </div>
 
+  <router-outlet></router-outlet>
 
-
-  <div class="container">
-
-    <!-- <div id="filters-box">
-      <h1>Filters</h1>
-    </div> -->
-
-    <div id="products-list">
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Black T-Shirt</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Black T-Shirt</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Black T-Shirt</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Black T-Shirt</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Black T-Shirt</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Black T-Shirt</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-
-      <div class="product">
-          <img class="product-img" src="assets/photos/shirt_0001.png" />
-          <h2>Black T-Shirt</h2>
-          <h3>Price: $20.00</h3>
-          <div class="add-to-cart-button">
-            <button>Add to cart</button>
-          </div>
-        </div>
-
-        <div class="product">
-            <img class="product-img" src="assets/photos/shirt_0001.png" />
-            <h2>Black T-Shirt</h2>
-            <h3>Price: $20.00</h3>
-            <div class="add-to-cart-button">
-              <button>Add to cart</button>
-            </div>
-          </div>
-
-    </div>
-
-  </div>
 </section>
