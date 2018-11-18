@@ -14,3 +14,14 @@ services:
             - "8000:8000"
         depends_on:
             - db
+    app:
+        build:
+            context: ./app
+            dockerfile: Dockerfile.angular
+        volumes:
+            - ./app/:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - "4200:4200"
+        depends_on:
+            - db
