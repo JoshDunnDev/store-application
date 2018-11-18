@@ -18,10 +18,10 @@ services:
         build:
             context: ./app
             dockerfile: Dockerfile.angular
-        command: npm run serve
         volumes:
-            - ./app/:/app
+            - ./app/:/usr/src/app
+            - /usr/src/app/node_modules
         ports:
-            - "8080:8080"
+            - "4200:4200"
         depends_on:
             - db
