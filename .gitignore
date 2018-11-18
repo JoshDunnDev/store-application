@@ -4,3 +4,4 @@ api/store-env
 *.pyc
 __pycache__
 app/.editorconfig
+.vscode
