@@ -1,15 +1,62 @@
 [
     {
+        "model": "products.Brand",
+        "pk": 1,
+        "fields": {
+            "name":"J&A Co.",
+            "slug": "j-and-a"
+
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 1,
+        "fields": {
+            "name": "pants",
+            "slug": "pants"
+        }
+
+    },
+    {
+        "model": "products.Category",
+        "pk": 2,
+        "fields": {
+            "name": "shirts",
+            "slug": "shirts"
+        }
+
+    },
+    {
+        "model": "products.Category",
+        "pk": 3,
+        "fields": {
+            "name": "hats",
+            "slug": "hats"
+        }
+
+    },
+    {
+        "model": "products.Category",
+        "pk": 4,
+        "fields": {
+            "name": "jackets",
+            "slug": "jackets"
+        }
+
+    },
+    {
         "model": "products.Product",
         "pk" : 2,
         "fields": {
+            "brand": 1,
             "name": "jeans",
+            "category": 1,
             "description" : "denim pants",
-            "category": "pants",
             "price": "35.99",
             "product_size": "L",
             "product_image": "/0001_photo.jpg",
-            "date_created": "2018-11-21"
+            "stock": 30,
+            "available": true
         }
     }
 ]

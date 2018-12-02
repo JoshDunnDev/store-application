@@ -9,7 +9,7 @@ while (time.time() < t_end):
         print("OK!")
         os.system("python manage.py makemigrations")
         os.system("python manage.py migrate")
-        # os.system("python manage.py loaddata scripts/product_data.json")
+        os.system("python manage.py loaddata scripts/product_data.json")
         os.system("python manage.py runserver 0.0.0.0:8000")
         break;
     except:
