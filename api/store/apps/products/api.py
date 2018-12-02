@@ -8,5 +8,5 @@ from .models import Product
 class ProductApi(ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    filter_fields = ('category', 'name')
+    filter_fields = ('category_id', 'name')
     filter_backends = (DjangoFilterBackend,)

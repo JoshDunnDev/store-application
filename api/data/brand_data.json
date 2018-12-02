@@ -1,0 +1,10 @@
+[{
+        "model": "products.Brand",
+        "pk": 1,
+        "fields": {
+            "name":"J&A Co.",
+            "slug": "j-and-a"
+
+        }
+    }
+]

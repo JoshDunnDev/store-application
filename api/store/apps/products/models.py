@@ -50,7 +50,7 @@ class Product(models.Model):
     # might not need slug given will use id for /api/
     # slug = models.SlugField(max_length=100, db_index=True)
     name = models.CharField(max_length=60)
-    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+    category_id = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     product_size = models.CharField(max_length=2,choices=product_size)

@@ -1,0 +1,65 @@
+[
+    
+    {
+        "model": "products.Product",
+        "pk" : 1,
+        "fields": {
+            "brand": 1,
+            "name": "Jonus Slim Fit Pant - Olive",
+            "category_id": 1,
+            "description" : "Olive Khakis",
+            "price": "45.00",
+            "product_size": "L",
+            "product_image": "/0001_photo.jpg",
+            "stock": 30,
+            "available": true
+        }
+    },
+    {
+        "model": "products.Product",
+        "pk" : 2,
+        "fields": {
+            "brand": 1,
+            "name": "Descartes Short - Charcoal",
+            "category_id": 3,
+            "description" : "Gray running shorts",
+            "price": "24.00",
+            "product_size": "L",
+            "product_image": "/0002_photo.jpg",
+            "stock": 30,
+            "available": true
+        }
+    },
+    {
+        "model": "products.Product",
+        "pk" : 3,
+        "fields": {
+            "brand": 1,
+            "name": "Kinross Jacket - Navy",
+            "category_id": 4,
+            "description" : "Light rain Jacket",
+            "price": "105.00",
+            "product_size": "L",
+            "product_image": "/0003_photo.jpg",
+            "stock": 30,
+            "available": true
+        }
+    },
+
+    {
+        "model": "products.Product",
+        "pk" : 4,
+        "fields": {
+            "brand": 1,
+            "name": "Tuco Tee - Black",
+            "category_id": 2,
+            "description" : "Black t-shirt",
+            "price": "34.00",
+            "product_size": "L",
+            "product_image": "/0004_photo.jpg",
+            "stock": 30,
+            "available": true
+        }
+    }
+
+]

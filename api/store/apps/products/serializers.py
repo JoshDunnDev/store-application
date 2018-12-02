@@ -12,7 +12,7 @@ class ProductSerializer(serializers.ModelSerializer):
     
     def to_representation(self, obj):
         serialized_data = super(ProductSerializer, self).to_representation(obj) # original serialized data
-        category_id = serialized_data.get('category') # get job category id from original serialized data
+        category_id = serialized_data.get('category_id') # get job category id from original serialized data
         category_name = Category.objects.get(id=category_id) # get the object from db
-        serialized_data['category_name'] = category_name.name # replace id with category name
+        serialized_data['category'] = category_name.name # replace id with category name
         return serialized_data # return modified serialized data
