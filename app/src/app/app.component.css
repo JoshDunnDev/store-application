@@ -112,3 +112,52 @@
   color: #fff;
   background-color: #333;
 }
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  /* Styles */
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1224px) {
+  /* Styles */
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+  
+  /* .app-title{
+    font-size: 14px;
+  } */
+
+  .nav-items {
+    flex-direction: column;
+  }
+
+  .app-title {
+    margin: auto;
+    font-size: 20px;
+
+  }
+
+
+  .search-bar {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+  }
+
+  .nav-buttons {
+    justify-content: space-between;
+  }
+
+
+  .category-nav {
+    font-size: 12px;
+  }
+}

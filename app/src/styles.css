@@ -186,3 +186,75 @@ table {
 	text-align: center;
 	border-top: 1px solid rgba(0,0,0,0.1);
 }
+
+
+
+/* ----- Media Queries ----- */
+
+
+
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1224px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+  
+  .category-nav {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .page-results h1 {
+    font-size: 12px;
+  }
+  
+  .category-header h1 {
+    font-size: 14px;
+  }
+
+  .sort-by button {
+    font-size: 12px;
+  }
+  
+  .product {
+    width: calc(50% - 10px);
+  }
+  
+  .product:nth-child(2n-1) {
+    margin-left: 0px;
+  }
+  
+  .product:nth-child(2n) {
+    margin-right: 0px;
+  }
+
+  .product h2 {
+    font-size: 14px;
+  }
+  
+  .product h3 {
+    font-size: 12px;
+  }
+  
+}
+
+

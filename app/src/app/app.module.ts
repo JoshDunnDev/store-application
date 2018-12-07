@@ -8,11 +8,15 @@ import { JacketsComponent } from './jackets/jackets.component';
 import { ShortsComponent } from './shorts/shorts.component';
 import { PantsComponent } from './pants/pants.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpModule } from '@angular/http';
+import { ProductsService } from './services/products.service';
+import { ProductFilterPipe } from './pipes/product-filter.pipe';
 
 
 @NgModule({
   imports: [
-    BrowserModule, 
+    BrowserModule,
+    HttpModule, 
     RouterModule.forRoot([
       { 
         path: '',   
@@ -53,6 +57,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ShortsComponent,
     PantsComponent,
     NotFoundComponent,
+    ProductFilterPipe,
+  ],
+  providers: [
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })

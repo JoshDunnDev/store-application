@@ -2,7 +2,7 @@
 
     <div class="product-page-header">
       <div class="page-results">
-        <h1>X Results</h1>
+        <h1 [hidden]="filterResultsData.count === 0">{{ filterResultsData.count }} Results</h1>
       </div>
       <div class="category-header">
         <h1>Store / T-Shirts</h1>
@@ -18,42 +18,13 @@
     <hr>
   
     <div id="products-list">
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Tuco Tee - Black</h2>
-        <h3>Price: $20.00</h3>
+      <div *ngFor="let product of products | productFilter:filterargs:filterResultsData" class="product">
+        <img class="product-img" src="{{ product.product_image }}" />
+        <h2>{{ product.name }}</h2>
+        <h3>Price: {{ product.price }}</h3>
         <div class="add-to-cart-button">
           <button>Add to cart</button>
         </div>
       </div>
-  
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Tuco Tee - Black</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-  
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Tuco Tee - Black</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-  
-      <div class="product">
-        <img class="product-img" src="assets/photos/shirt_0001.png" />
-        <h2>Tuco Tee - Black</h2>
-        <h3>Price: $20.00</h3>
-        <div class="add-to-cart-button">
-          <button>Add to cart</button>
-        </div>
-      </div>
-  
-    </div>
   
   </div>

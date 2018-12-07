@@ -1,3 +1,4 @@
+import { ProductsService } from './../services/products.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShortsComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+  filterargs = {category: 'shorts'};
+  products: any[];
+  filterResultsData = { count: 0 };
+
+  constructor(private service: ProductsService) { 
+   
   }
 
+  ngOnInit() {
+    this.service.getProducts()
+      .subscribe(
+        response => {
+          this.products = response.json();
+        }, 
+        error => {
+          alert('An unexpected error occurred.')
+          console.log(error);
+        });
+  }
 }
