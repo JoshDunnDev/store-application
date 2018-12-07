@@ -5,3 +5,4 @@ api/store-env
 __pycache__
 app/.editorconfig
 .vscode
+dist/
