@@ -5,7 +5,7 @@
         "description": "Black t-shirt",
         "price": "20.00",
         "product_size": "L",
-        "product_image": "assets/photos/shirt_0001.png",
+        "product_image": "./assets/photos/shirt_0001.png",
         "available": true,
         "category_id": 2,
         "category": "shirts"
@@ -16,7 +16,7 @@
         "description": "Gray t-shirt",
         "price": "20.00",
         "product_size": "L",
-        "product_image": "assets/photos/shirt_0002.png",
+        "product_image": "./assets/photos/shirt_0002.png",
         "available": true,
         "category_id": 2,
         "category": "shirts"
@@ -27,7 +27,7 @@
         "description": "White t-shirt",
         "price": "20.00",
         "product_size": "L",
-        "product_image": "assets/photos/shirt_0003.png",
+        "product_image": "./assets/photos/shirt_0003.png",
         "available": true,
         "category_id": 2,
         "category": "shirts"
@@ -38,7 +38,7 @@
         "description": "Gray t-shirt",
         "price": "25.00",
         "product_size": "L",
-        "product_image": "assets/photos/shirt_0004.png",
+        "product_image": "./assets/photos/shirt_0004.png",
         "available": true,
         "category_id": 2,
         "category": "shirts"
@@ -49,7 +49,7 @@
         "description": "Light rain Jacket",
         "price": "75.00",
         "product_size": "L",
-        "product_image": "assets/photos/jacket_0001.png",
+        "product_image": "./assets/photos/jacket_0001.png",
         "available": true,
         "category_id": 4,
         "category": "jackets"
@@ -60,7 +60,7 @@
         "description": "Harrington-style Jacket",
         "price": "65.00",
         "product_size": "L",
-        "product_image": "assets/photos/jacket_0002.png",
+        "product_image": "./assets/photos/jacket_0002.png",
         "available": true,
         "category_id": 4,
         "category": "jackets"
@@ -71,7 +71,7 @@
         "description": "Military Jacket",
         "price": "65.00",
         "product_size": "L",
-        "product_image": "assets/photos/jacket_0003.png",
+        "product_image": "./assets/photos/jacket_0003.png",
         "available": true,
         "category_id": 4,
         "category": "jackets"
@@ -82,7 +82,7 @@
         "description": "Bomber Jacket",
         "price": "65.00",
         "product_size": "L",
-        "product_image": "assets/photos/jacket_0004.png",
+        "product_image": "./assets/photos/jacket_0004.png",
         "available": true,
         "category_id": 4,
         "category": "jackets"
@@ -93,7 +93,7 @@
         "description": "Gray running shorts",
         "price": "45.00",
         "product_size": "L",
-        "product_image": "assets/photos/shorts_0001.png",
+        "product_image": "./assets/photos/shorts_0001.png",
         "available": true,
         "category_id": 3,
         "category": "shorts"
@@ -104,7 +104,7 @@
         "description": "Camo print shorts",
         "price": "35.00",
         "product_size": "L",
-        "product_image": "assets/photos/shorts_0002.png",
+        "product_image": "./assets/photos/shorts_0002.png",
         "available": true,
         "category_id": 3,
         "category": "shorts"
@@ -115,7 +115,7 @@
         "description": "Chris Paul Collection shorts",
         "price": "40.00",
         "product_size": "L",
-        "product_image": "assets/photos/shorts_0003.png",
+        "product_image": "./assets/photos/shorts_0003.png",
         "available": true,
         "category_id": 3,
         "category": "shorts"
@@ -126,7 +126,7 @@
         "description": "Light blue sweat shorts",
         "price": "35.00",
         "product_size": "L",
-        "product_image": "assets/photos/shorts_0004.png",
+        "product_image": "./assets/photos/shorts_0004.png",
         "available": true,
         "category_id": 3,
         "category": "shorts"
@@ -137,7 +137,7 @@
         "description": "Olive pants",
         "price": "45.00",
         "product_size": "L",
-        "product_image": "assets/photos/pants_0001.png",
+        "product_image": "./assets/photos/pants_0001.png",
         "available": true,
         "category_id": 1,
         "category": "pants"
@@ -148,7 +148,7 @@
         "description": "Black jogger pants",
         "price": "40.00",
         "product_size": "L",
-        "product_image": "assets/photos/pants_0002.png",
+        "product_image": "./assets/photos/pants_0002.png",
         "available": true,
         "category_id": 1,
         "category": "pants"
@@ -159,7 +159,7 @@
         "description": "Beige tapered legs pants",
         "price": "55.00",
         "product_size": "L",
-        "product_image": "assets/photos/pants_0003.png",
+        "product_image": "./assets/photos/pants_0003.png",
         "available": true,
         "category_id": 1,
         "category": "pants"
@@ -170,7 +170,7 @@
         "description": "Blue pants",
         "price": "55.00",
         "product_size": "L",
-        "product_image": "assets/photos/pants_0004.png",
+        "product_image": "./assets/photos/pants_0004.png",
         "available": true,
         "category_id": 1,
         "category": "pants"

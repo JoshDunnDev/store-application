@@ -20,7 +20,7 @@ import { ProductFilterPipe } from './pipes/product-filter.pipe';
     RouterModule.forRoot([
       { 
         path: '',   
-        redirectTo: '/store', 
+        redirectTo: 'store', 
         pathMatch: 'full' 
       },
       {

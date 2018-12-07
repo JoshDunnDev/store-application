@@ -7,7 +7,7 @@ import { Http } from '@angular/http';
 })
 export class ProductsService {
 
-  private url = '../assets/mockup-data.JSON';
+  private url = './assets/mockup-data.JSON';
 
   constructor(private http: Http) { 
    
