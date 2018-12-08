@@ -5,3 +5,8 @@ api/store-env
 __pycache__
 app/.editorconfig
 .vscode
+.coverage
+.coveragerc
+htmlcov
+api/store/apps/products/migrations/*.py
+api/www/media/*.jpg
