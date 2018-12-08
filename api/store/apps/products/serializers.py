@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import Product, Category
 
 class ProductSerializer(serializers.ModelSerializer):
-
+    #TODO: Filter by category name
     class Meta:
         queryset = Product.objects.all()
         model = Product
