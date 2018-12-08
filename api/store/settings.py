@@ -125,7 +125,8 @@ USE_L10N = True
 USE_TZ = True
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+    # 'DEFAULT_AUTHENTICATION_CLASSES': ('store.apps.products.api_authentication.AdminOnlyAuth',)
 }
 
 # Static files (CSS, JavaScript, Images)

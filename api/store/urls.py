@@ -29,7 +29,7 @@ router.register(r'products', api.ProductApi, base_name="product")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^api/', include((router.urls, 'store'), namespace='rest_framework')),
-    re_path(r'^api/', include(router.urls)),
-    re_path(r'^.*$', RedirectView.as_view(url='http://localhost:8000/api', permanent=False), name='index')
+    re_path(r'^api/v1/', include((router.urls, 'store'), namespace='rest_framework')),
+    re_path(r'^api/v1/', include(router.urls)),
+    re_path(r'^.*$', RedirectView.as_view(url='http://localhost:8000/api/v1/', permanent=False), name='index')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
