@@ -28,7 +28,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  font-family: arial, sans-serif;
+
 }
 ol, ul {
 	list-style: none;
@@ -172,6 +174,25 @@ table {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    background-color: #ffffff;
+    margin: 5px 0px 0px -30px;
+  }
+
+  .sort-item {
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+
+  .sort-item:hover {
+    background-color: #ddd;
   }
 
 

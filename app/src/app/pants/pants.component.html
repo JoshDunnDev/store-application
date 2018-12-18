@@ -8,10 +8,15 @@
         <h1>Store / Pants</h1>
       </div>
       <div class="sort-by">
-        <button>
+        <button (click)="toggleHide = !toggleHide">
           <span>Sort By  </span>
           <span class="caret"></span>
         </button>
+        <ul *ngIf="toggleHide" class="dropdown-menu">
+          <li (click)="defaultList()" class="sort-item">Default List</li>
+          <li (click)="sortByLow()" class="sort-item">Price Low to High</li>
+          <li (click)="sortByHigh()" class="sort-item">Price High to Low</li>
+        </ul>
       </div>
     </div>
   

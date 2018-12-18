@@ -12,7 +12,6 @@ import { HttpModule } from '@angular/http';
 import { ProductsService } from './services/products.service';
 import { ProductFilterPipe } from './pipes/product-filter.pipe';
 
-
 @NgModule({
   imports: [
     BrowserModule,
