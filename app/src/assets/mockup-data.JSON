@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Tuco Tee - Black",
-        "description": "Black t-shirt",
+        "description": "Black Tuco Tee t-shirt",
         "price": "20.00",
         "product_size": "L",
         "product_image": "./assets/photos/shirt_0001.png",
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "name": "Tuco Tee - Heather Gray",
-        "description": "Gray t-shirt",
+        "description": "Heather Gray Tuco Tee t-shirt",
         "price": "20.00",
         "product_size": "L",
         "product_image": "./assets/photos/shirt_0002.png",
@@ -24,7 +24,7 @@
     {
         "id": 3,
         "name": "Tuco Tee - White",
-        "description": "White t-shirt",
+        "description": "White Tuco Tee t-shirt",
         "price": "20.00",
         "product_size": "L",
         "product_image": "./assets/photos/shirt_0003.png",
@@ -35,7 +35,7 @@
     {
         "id": 4,
         "name": "Kamran Tee - Heather Gray",
-        "description": "Gray t-shirt",
+        "description": "Heather Gray Kamran Tee t-shirt",
         "price": "25.00",
         "product_size": "L",
         "product_image": "./assets/photos/shirt_0004.png",
@@ -46,7 +46,7 @@
     {
         "id": 5,
         "name": "Kinross Jacket - Navy",
-        "description": "Light rain Jacket",
+        "description": "Navy Kinross Light rain Jacket",
         "price": "75.00",
         "product_size": "L",
         "product_image": "./assets/photos/jacket_0001.png",
@@ -57,7 +57,7 @@
     {
         "id": 6,
         "name": "Darwin Jacket - Taupe",
-        "description": "Harrington-style Jacket",
+        "description": "Taupe Harrington-style Darwin Jacket",
         "price": "65.00",
         "product_size": "L",
         "product_image": "./assets/photos/jacket_0002.png",
@@ -68,7 +68,7 @@
     {
         "id": 7,
         "name": "Lucida Jacket - Olive",
-        "description": "Military Jacket",
+        "description": "Olive Military Lucida Jacket",
         "price": "65.00",
         "product_size": "L",
         "product_image": "./assets/photos/jacket_0003.png",
@@ -79,7 +79,7 @@
     {
         "id": 8,
         "name": "Morrison Jacket - Off White",
-        "description": "Bomber Jacket",
+        "description": "Off white Bomber Morrison Jacket",
         "price": "65.00",
         "product_size": "L",
         "product_image": "./assets/photos/jacket_0004.png",
@@ -89,8 +89,8 @@
     },
     {
         "id": 9,
-        "name": "Descartes Short - Charcoal",
-        "description": "Gray running shorts",
+        "name": "Descartes Shorts - Charcoal",
+        "description": "Gray charcoal running descortes shorts",
         "price": "45.00",
         "product_size": "L",
         "product_image": "./assets/photos/shorts_0001.png",
@@ -101,7 +101,7 @@
     {
         "id": 10,
         "name": "Autry Knit Shorts - Khaki",
-        "description": "Camo print shorts",
+        "description": "Khaki Camo print Autry Knit shorts",
         "price": "35.00",
         "product_size": "L",
         "product_image": "./assets/photos/shorts_0002.png",
@@ -112,7 +112,7 @@
     {
         "id": 11,
         "name": "Rome Shorts - Khaki",
-        "description": "Chris Paul Collection shorts",
+        "description": "Khaki Chris Paul Collection Rome shorts",
         "price": "40.00",
         "product_size": "L",
         "product_image": "./assets/photos/shorts_0003.png",
@@ -122,8 +122,8 @@
     },
     {
         "id": 12,
-        "name": "Bromley Short - Light Blue",
-        "description": "Light blue sweat shorts",
+        "name": "Bromley Shorts - Light Blue",
+        "description": "Light blue bromley sweat shorts",
         "price": "35.00",
         "product_size": "L",
         "product_image": "./assets/photos/shorts_0004.png",
@@ -133,8 +133,8 @@
     },
     {
         "id": 13,
-        "name": "Jonus Slim Fit Pant - Olive",
-        "description": "Olive pants",
+        "name": "Jonus Slim Fit Pants - Olive",
+        "description": "Olive Jonus Slim Fit pants",
         "price": "45.00",
         "product_size": "L",
         "product_image": "./assets/photos/pants_0001.png",
@@ -145,7 +145,7 @@
     {
         "id": 14,
         "name": "Jamo Jogger - Black",
-        "description": "Black jogger pants",
+        "description": "Black Jamo jogger pants",
         "price": "40.00",
         "product_size": "L",
         "product_image": "./assets/photos/pants_0002.png",
@@ -155,8 +155,8 @@
     },
     {
         "id": 15,
-        "name": "Hutson Pant - Beige",
-        "description": "Beige tapered legs pants",
+        "name": "Hutson Pants - Beige",
+        "description": "Beige tapered legs Hutson pants",
         "price": "55.00",
         "product_size": "L",
         "product_image": "./assets/photos/pants_0003.png",
@@ -166,8 +166,8 @@
     },
     {
         "id": 16,
-        "name": "Kenzie Pant - Blue",
-        "description": "Blue pants",
+        "name": "Kenzie Pants - Blue",
+        "description": "Blue Kenzie pants",
         "price": "55.00",
         "product_size": "L",
         "product_image": "./assets/photos/pants_0004.png",

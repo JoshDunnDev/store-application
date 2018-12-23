@@ -6,16 +6,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ProductFilterPipe implements PipeTransform {
 
-  transform(products: any[], filter: any, filterResultsData): any {
+  transform(products: any[], filter: any, filterResultsData?: any): any {
     if (!products || !filter) {
         return products;
     }
     // filter items array, items which match and return true will be
     // kept, false will be filtered out
 
-    let filterdProducts = products.filter(product => product.category.indexOf(filter.category) !== -1);
-    filterResultsData.count = filterdProducts.length;
-    return filterdProducts;
+    let filteredProducts = products.filter(product => product.category.indexOf(filter.category) !== -1);
+    if (filterResultsData)
+      filterResultsData.count = filteredProducts.length;
+    return filteredProducts;
   }
 
 }

@@ -1,3 +1,4 @@
+import { SearchTextService } from './services/searchtext.service';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -11,11 +12,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpModule } from '@angular/http';
 import { ProductsService } from './services/products.service';
 import { ProductFilterPipe } from './pipes/product-filter.pipe';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component'; 
 
 @NgModule({
   imports: [
     BrowserModule,
-    HttpModule, 
+    HttpModule,
+    FormsModule, 
     RouterModule.forRoot([
       { 
         path: '',   
@@ -43,6 +48,10 @@ import { ProductFilterPipe } from './pipes/product-filter.pipe';
         component: PantsComponent
       },
       {
+        path: 'store/search/:searchText', 
+        component: SearchComponent
+      },
+      {
         path: '**', 
         component: NotFoundComponent
       },
@@ -57,9 +66,12 @@ import { ProductFilterPipe } from './pipes/product-filter.pipe';
     PantsComponent,
     NotFoundComponent,
     ProductFilterPipe,
+    SearchFilterPipe,
+    SearchComponent,
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    SearchTextService
   ],
   bootstrap: [AppComponent]
 })

@@ -2,12 +2,11 @@
 
   <div class="product-page-header">
     <div class="page-results">
-      <h1 [hidden]="filterResultsData.count === 0">{{ filterResultsData.count }} Results</h1>
+      <h1>{{ filterResultsData.count }} Results</h1>
     </div>
     <div class="category-header">
-      <h1>Store / All Products</h1>
+      <h1>Store / Search / {{ searchText | titlecase }}</h1>
     </div>
-
     <div class="sort-by">
       <button (click)="toggleHide = !toggleHide">
         <span>Sort By  </span>
@@ -24,7 +23,7 @@
   <hr>
 
   <div id="products-list">
-    <div *ngFor="let product of products | productFilter:filterargs:filterResultsData" class="product">
+    <div *ngFor="let product of products | productFilter:filterargs | searchFilter: searchText : 'description' : filterResultsData; let i = index" class="product">
       <img class="product-img" src="{{ product.product_image }}" />
       <h2>{{ product.name }}</h2>
       <h3>Price: {{ product.price }}</h3>
@@ -32,7 +31,11 @@
         <button>Add to cart</button>
       </div>
     </div>
-    
+    <div *ngIf="filterResultsData.count === 0" class="no-results">
+      <h1>There are currently no results for the search keywords: {{searchText}}.</h1>
+      <button routerLink="/store">Clear Filters</button>
+    </div>
+
   </div>
 
 </div>

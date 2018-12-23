@@ -3,7 +3,10 @@
     <div class="nav-bar">
       <div class="nav-items">
         <a routerLink="/store" class="app-title">Store</a>
-        <input class="search-bar" type="text" placeholder="Search.."/>
+        <div class="search-bar">
+          <input [(ngModel)]="searchText" (keyup.enter)="onEnterPressed()" type="text" placeholder="Search.."/>
+          <button (click)="onEnterPressed()">Search</button>
+        </div>
         <div class="nav-buttons">
           <div class="sign-in-button">
             <button>Sign In</button>

@@ -1,21 +1,24 @@
+import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './../services/products.service';
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
+export class SearchComponent implements OnInit {
 
-export class HomeComponent implements OnInit {
+  private sub: any;
+  searchText: string;
 
   filterargs = {category: ''};
   products: any[];
   filterResultsData = { count: 0 };
   toggleHide = false;
 
-  constructor(private service: ProductsService) { 
-
+  constructor(private service: ProductsService, private route: ActivatedRoute) { 
+   
   }
 
   ngOnInit() {
@@ -28,9 +31,13 @@ export class HomeComponent implements OnInit {
           alert('An unexpected error occurred.')
           console.log(error);
         });
+
+        this.sub = this.route.params.subscribe(params => {
+          this.searchText = params.searchText;
+   
+          // In a real app: dispatch action to load the details here.
+       });
   }
-
-
 
   sortByLow() {
     this.products.sort((a, b) => {
@@ -61,7 +68,7 @@ export class HomeComponent implements OnInit {
         console.log(error);
       });
     this.toggleHide = false;
+    
   }
-
 
 }
