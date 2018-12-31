@@ -60,4 +60,11 @@ export class TShirtsComponent implements OnInit {
     this.toggleHide = false;
   }
 
+  autoCloseDropdown(event) {
+    let target = event.target;
+    if (!target.closest(".dropdown-menu")) { 
+      this.toggleHide = false;
+    }
+  }
+
 }

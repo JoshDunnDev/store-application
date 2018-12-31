@@ -1,0 +1,87 @@
+<div class="sign-in-container">
+    <div class="sign-in-nav-bar">
+        <div class="sign-in-nav-items">
+          <a routerLink="/store/register" class="nav-selected">Register</a>
+          <a routerLink="/store/sign-in">Sign In</a>
+        </div> 
+    </div>
+    <div class="register">
+      <h1>Register</h1>
+      <form [formGroup]="form" (ngSubmit)="register(form)">
+        <div class="form-group">
+            <label for="displayName">Display Name</label>
+            <input 
+              required 
+              formControlName="displayName"
+              name="displayName"
+              type="text" 
+              class="email-box"
+            > 
+            <div *ngIf="displayName.touched && displayName.invalid" class="alert">
+              <div>
+                Please enter a Display Name.
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Email</label>
+            <input 
+              required 
+              formControlName="email"
+              name="email"
+              type="text" 
+              class="email-box"
+            > 
+            <div class="alert">
+              <div *ngIf="email.touched && email.invalid">
+                Please enter a valid Email Address.
+              </div>
+              <div *ngIf="form.pristine && form.errorCode === 'auth/email-already-in-use'">
+                {{ form.errorMessage }}
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Password</label>
+            <input 
+              required 
+              formControlName="password"
+              name="password"
+              type="password" 
+              class="email-box"
+            > 
+            <div class="alert">
+              <div *ngIf="password.touched && password.value === ''">
+                Password is required.
+              </div>
+              <div *ngIf="password.errors?.minlength">
+                Password must be {{ password.errors.minlength.requiredLength }} characters long.
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Confirm Password</label>
+            <input 
+              required
+              formControlName="confirmPassword" 
+              name="confirmPassword"
+              type="password" 
+              class="email-box"
+            > 
+            <div *ngIf="confirmPassword.invalid && confirmPassword?.value?.length > 0" class="alert">
+              <div> 
+                Passwords must match.
+              </div>
+            </div>
+        </div>
+        <div class="register-button">
+          <button [disabled]="!form.valid">Register</button>
+        </div>
+      </form>
+  
+      <div class="have-account">
+        <a routerLink="/store/sign-in">Already have an account? Sign in here.</a>
+      </div>
+  
+    </div>
+  </div>

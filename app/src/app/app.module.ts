@@ -1,4 +1,5 @@
-import { SearchTextService } from './services/searchtext.service';
+import { UserService } from './services/user.service';
+import { AuthService } from './services/auth.service';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -13,14 +14,23 @@ import { HttpModule } from '@angular/http';
 import { ProductsService } from './services/products.service';
 import { ProductFilterPipe } from './pipes/product-filter.pipe';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component'; 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from 'src/environments/environment';
+import { SigninComponent } from './signin/signin.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { AdminAuthGuardService } from './services/admin-auth-guard.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule, 
+    FormsModule,
+    ReactiveFormsModule, 
     RouterModule.forRoot([
       { 
         path: '',   
@@ -32,6 +42,14 @@ import { SearchComponent } from './search/search.component';
         component: HomeComponent
       },
       {
+        path: 'store/sign-in', 
+        component: SigninComponent
+      },
+      {
+        path: 'store/register', 
+        component: RegisterComponent
+      },
+      {
         path: 'store/t-shirts', 
         component: TShirtsComponent
       },
@@ -41,7 +59,9 @@ import { SearchComponent } from './search/search.component';
       },
       {
         path: 'store/shorts', 
-        component: ShortsComponent
+        component: ShortsComponent,
+        //Admin Auth Guard Services
+        // canActivate: [AuthGuardService, AdminAuthGuardService]
       },
       {
         path: 'store/pants', 
@@ -55,7 +75,10 @@ import { SearchComponent } from './search/search.component';
         path: '**', 
         component: NotFoundComponent
       },
-    ])
+    ]),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   declarations: [
     AppComponent,
@@ -68,10 +91,15 @@ import { SearchComponent } from './search/search.component';
     ProductFilterPipe,
     SearchFilterPipe,
     SearchComponent,
+    SigninComponent,
+    RegisterComponent,
   ],
   providers: [
     ProductsService,
-    SearchTextService
+    AuthService,
+    AuthGuardService,
+    UserService,
+    AdminAuthGuardService
   ],
   bootstrap: [AppComponent]
 })

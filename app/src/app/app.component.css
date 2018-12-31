@@ -72,29 +72,81 @@
   display: flex;
 }
 
-.sign-in-button {
+.sign-in-button,
+.cart-button,
+.username-button {
   padding: 4px 10px 0 0;
 }
 
-.sign-in-button button {
+.sign-in-button button,
+.cart-button button,
+.username-button button {
   background-color: #fff;
   border-radius: 5px;
-  width: 100px;
   height: 30px;
   color: #333;
   font-size: 12px;
   font-family: sans-serif;
   text-transform: uppercase;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
-.sign-in-button button:hover {
+.sign-in-button button:hover,
+.cart-button button:hover,
+.username-button button:hover {
   background-color: #333;
   color: #fff;
   cursor: pointer;
 }
 
-.cart-button:hover {
+.username-button button span {
+  border: solid;
+  border-color: #333;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  position: relative;
+  padding: 3px;
+  transform: rotate(45deg);
+  top: -3px;
+  left: 2px;
+  margin: 0 5px;
+}
+
+.username-button button:hover span {
+  border-color: #fff;
+}
+
+.logged-in-dropdown {
+  position: absolute;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  background-color: #ffffff;
+  margin: 5px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logged-in-dropdown-item {
+  padding: 5px 20px;
+}
+
+.logged-in-dropdown-item:hover {
+  background-color: #333;
+  color: #fff;
   cursor: pointer;
+}
+
+.cart-button span {
+  background-color: #fff;
+  color: #333;
+  border-radius: 100%;
+  padding: 1px 5px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 .sign-in-img,

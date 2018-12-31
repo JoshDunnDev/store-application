@@ -8,11 +8,27 @@
           <button (click)="onEnterPressed()">Search</button>
         </div>
         <div class="nav-buttons">
-          <div class="sign-in-button">
-            <button>Sign In</button>
+          <ng-template #anonymousUser>
+            <div class="sign-in-button">
+              <button routerLink="/store/sign-in">Sign In</button>
+            </div>
+          </ng-template>
+
+          <div>
+            <div *ngIf="appUser; else anonymousUser" (click)="toggleHide = !toggleHide" class="username-button">
+              <button>{{ appUser.name }}<span></span></button>
+            </div>
+            <div (window:mouseup)="autoCloseDropdown($event)" *ngIf="toggleHide && appUser" class="logged-in-dropdown">
+              <a class="logged-in-dropdown-item">My Orders</a>
+              <ng-container *ngIf="appUser.isAdmin">
+                  <a class="logged-in-dropdown-item">Manage Orders</a>
+                  <a class="logged-in-dropdown-item">Manage Products</a>
+              </ng-container>
+              <a (click)="logout(); toggleHide=false" class="logged-in-dropdown-item">Logout</a>
+            </div>
           </div>
           <div class="cart-button">
-            <img class="cart-img" src="assets/photos/shoppingcart.png" />
+            <button>Cart <span>0</span></button>
           </div>
         </div>
       </div>
@@ -21,12 +37,12 @@
 
   <div id="sub-nav">
     <div class="sub-nav-bar">
-      <div class="sub-nav-items">
+     <div class="sub-nav-items">
         <a routerLink="/store/t-shirts" routerLinkActive="selected" class="category-nav t-shirts-button">T-Shirts</a>
         <a routerLink="/store/jackets" routerLinkActive="selected" class="category-nav jackets-button">Jackets</a>
         <a routerLink="/store/shorts" routerLinkActive="selected" class="category-nav shorts-button">Shorts</a>
         <a routerLink="/store/pants" routerLinkActive="selected" class="category-nav pants-button">Pants</a>
-      </div>
+      </div> 
     </div>
   </div>
 

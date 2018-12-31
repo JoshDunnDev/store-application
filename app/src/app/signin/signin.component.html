@@ -1,0 +1,59 @@
+<div class="sign-in-container">
+  <div class="sign-in-nav-bar">
+      <div class="sign-in-nav-items">
+        <a routerLink="/store/register">Register</a>
+        <a routerLink="/store/sign-in" class="nav-selected">Sign In</a>
+      </div> 
+  </div>
+  <div class="sign-in">
+    <h1>Sign In With</h1>
+    <div (click)="googleSignIn()" class="google-button">
+      <img src="./assets/icons/btn_google_dark_normal_ios.svg">
+      <div><span>Sign in with Google</span></div>
+    </div>
+    <div class="or-section">
+      <span>OR</span>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="emailSignIn(form)">
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            required 
+            formControlName="email"
+            name="email"
+            type="text" 
+            class="email-box"
+          > 
+          <div *ngIf="email.touched && email.invalid" class="alert">
+            <div>
+              Please enter a valid Email Address.
+            </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input 
+            required 
+            formControlName="password"
+            name="password"
+            type="password" 
+            class="email-box"
+          > 
+          <div *ngIf="form.pristine && form.errorCode === 'auth/wrong-password'"class="alert">
+            <div>
+              {{ form.errorMessage }}
+            </div>
+          </div>
+      </div>
+      <div class="sign-in-button">
+        <button [disabled]="!form.valid">Sign In</button>
+      </div>
+    </form>
+
+    <div class="forgot-password">
+      <a routerLink="/store/forgot-password">Forgot your passord?</a>
+    </div>
+
+  </div>
+</div>

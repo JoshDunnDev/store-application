@@ -71,4 +71,11 @@ export class SearchComponent implements OnInit {
     
   }
 
+  autoCloseDropdown(event) {
+    let target = event.target;
+    if (!target.closest(".dropdown-menu")) { 
+      this.toggleHide = false;
+    }
+  }
+
 }

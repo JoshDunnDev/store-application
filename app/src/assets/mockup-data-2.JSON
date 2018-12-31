@@ -1,0 +1,183 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Tuco Tee - Black",
+            "description": "Black Tuco Tee t-shirt",
+            "price": "20.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shirt_0001.png",
+            "available": true,
+            "category_id": 2,
+            "category": "shirts"
+        },
+        {
+            "id": 2,
+            "name": "Tuco Tee - Heather Gray",
+            "description": "Heather Gray Tuco Tee t-shirt",
+            "price": "20.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shirt_0002.png",
+            "available": true,
+            "category_id": 2,
+            "category": "shirts"
+        },
+        {
+            "id": 3,
+            "name": "Tuco Tee - White",
+            "description": "White Tuco Tee t-shirt",
+            "price": "20.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shirt_0003.png",
+            "available": true,
+            "category_id": 2,
+            "category": "shirts"
+        },
+        {
+            "id": 4,
+            "name": "Kamran Tee - Heather Gray",
+            "description": "Heather Gray Kamran Tee t-shirt",
+            "price": "25.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shirt_0004.png",
+            "available": true,
+            "category_id": 2,
+            "category": "shirts"
+        },
+        {
+            "id": 5,
+            "name": "Kinross Jacket - Navy",
+            "description": "Navy Kinross Light rain Jacket",
+            "price": "75.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/jacket_0001.png",
+            "available": true,
+            "category_id": 4,
+            "category": "jackets"
+        },
+        {
+            "id": 6,
+            "name": "Darwin Jacket - Taupe",
+            "description": "Taupe Harrington-style Darwin Jacket",
+            "price": "65.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/jacket_0002.png",
+            "available": true,
+            "category_id": 4,
+            "category": "jackets"
+        },
+        {
+            "id": 7,
+            "name": "Lucida Jacket - Olive",
+            "description": "Olive Military Lucida Jacket",
+            "price": "65.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/jacket_0003.png",
+            "available": true,
+            "category_id": 4,
+            "category": "jackets"
+        },
+        {
+            "id": 8,
+            "name": "Morrison Jacket - Off White",
+            "description": "Off white Bomber Morrison Jacket",
+            "price": "65.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/jacket_0004.png",
+            "available": true,
+            "category_id": 4,
+            "category": "jackets"
+        },
+        {
+            "id": 9,
+            "name": "Descartes Shorts - Charcoal",
+            "description": "Gray charcoal running descortes shorts",
+            "price": "45.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shorts_0001.png",
+            "available": true,
+            "category_id": 3,
+            "category": "shorts"
+        },
+        {
+            "id": 10,
+            "name": "Autry Knit Shorts - Khaki",
+            "description": "Khaki Camo print Autry Knit shorts",
+            "price": "35.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shorts_0002.png",
+            "available": true,
+            "category_id": 3,
+            "category": "shorts"
+        },
+        {
+            "id": 11,
+            "name": "Rome Shorts - Khaki",
+            "description": "Khaki Chris Paul Collection Rome shorts",
+            "price": "40.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shorts_0003.png",
+            "available": true,
+            "category_id": 3,
+            "category": "shorts"
+        },
+        {
+            "id": 12,
+            "name": "Bromley Shorts - Light Blue",
+            "description": "Light blue bromley sweat shorts",
+            "price": "35.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/shorts_0004.png",
+            "available": true,
+            "category_id": 3,
+            "category": "shorts"
+        },
+        {
+            "id": 13,
+            "name": "Jonus Slim Fit Pants - Olive",
+            "description": "Olive Jonus Slim Fit pants",
+            "price": "45.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/pants_0001.png",
+            "available": true,
+            "category_id": 1,
+            "category": "pants"
+        },
+        {
+            "id": 14,
+            "name": "Jamo Jogger - Black",
+            "description": "Black Jamo jogger pants",
+            "price": "40.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/pants_0002.png",
+            "available": true,
+            "category_id": 1,
+            "category": "pants"
+        },
+        {
+            "id": 15,
+            "name": "Hutson Pants - Beige",
+            "description": "Beige tapered legs Hutson pants",
+            "price": "55.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/pants_0003.png",
+            "available": true,
+            "category_id": 1,
+            "category": "pants"
+        },
+        {
+            "id": 16,
+            "name": "Kenzie Pants - Blue",
+            "description": "Blue Kenzie pants",
+            "price": "55.00",
+            "product_size": "L",
+            "product_image": "./assets/photos/pants_0004.png",
+            "available": true,
+            "category_id": 1,
+            "category": "pants"
+        }
+    ],
+    "shopping-cart": [
+        
+    ]
+}
