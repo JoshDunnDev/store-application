@@ -33,7 +33,7 @@ export class SearchComponent implements OnInit {
         });
 
         this.sub = this.route.params.subscribe(params => {
-          this.searchText = params.searchText;
+          this.searchText = params.searchText.toLowerCase();
    
           // In a real app: dispatch action to load the details here.
        });
