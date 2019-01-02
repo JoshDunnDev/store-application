@@ -40,9 +40,9 @@
             type="password" 
             class="email-box"
           > 
-          <div *ngIf="form.pristine && form.errorCode === 'auth/wrong-password'"class="alert">
+          <div *ngIf="form.pristine && errorCode === 'auth/wrong-password'" class="alert">
             <div>
-              {{ form.errorMessage }}
+              {{ errorMessage }}
             </div>
           </div>
       </div>

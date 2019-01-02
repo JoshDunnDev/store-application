@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { AppUser } from '../models/app-user';
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
@@ -13,6 +13,17 @@ import { of } from 'rxjs';
 })
 export class AuthService {
   user$: Observable<firebase.User>;
+  public test = 'Test';
+
+  private errorMessageSubject = new Subject<string>();
+  private errorCodeSubject = new Subject<string>();
+
+  public getErrorMessage():Subject<string>{
+    return this.errorMessageSubject;
+  }
+  public getErrorCode():Subject<string>{
+    return this.errorCodeSubject;
+  }
 
   constructor(private userService: UserService, private afAuth: AngularFireAuth, private route: ActivatedRoute) { 
     this.user$ = afAuth.authState;
@@ -33,21 +44,17 @@ export class AuthService {
     localStorage.setItem('returnUrl', returnUrl);
     firebase.auth().signInWithEmailAndPassword(form.value.email, form.value.password).then(function(response){
       form.reset();
-      form.errorCode = '';
-    }).catch(function(error) {
-      form.errorCode = error.code;
-      form.errorMessage = error.message;
-      form.markAsPristine();
-    });
+    }).catch(
+      error => {
+        this.errorMessageSubject.next(error.message), this.errorCodeSubject.next(error.code), form.markAsPristine();
+      });
   }
 
-  register(form){
+  register(form) {
     let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
     localStorage.setItem('returnUrl', returnUrl);
     firebase.auth().createUserWithEmailAndPassword(form.value.email, form.value.password).then(function(response){
-      form.errorCode = '';
       firebase.auth().signInWithEmailAndPassword(form.value.email, form.value.password).then(function(response){
-        form.errorCode = '';
         let user = firebase.auth().currentUser;
         user.updateProfile({
           displayName: form.value.displayName,
@@ -59,18 +66,14 @@ export class AuthService {
           console.log(error);
         });
         form.reset();
-
       }).catch(function(error) {
-        form.errorCode = error.code;
-        form.errorMessage = error.message;
-        form.markAsPristine();
+        //Error
+        console.log(error);
       });
-    }).catch(function(error) {
-
-      form.errorCode = error.code;
-      form.errorMessage = error.message;
-      form.markAsPristine();
-    });
+    }).catch(
+      error => {
+        this.errorMessageSubject.next(error.message), this.errorCodeSubject.next(error.code), form.markAsPristine()
+      });
   }
 
   get appUser$() : Observable<AppUser> {

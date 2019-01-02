@@ -36,8 +36,8 @@
               <div *ngIf="email.touched && email.invalid">
                 Please enter a valid Email Address.
               </div>
-              <div *ngIf="form.pristine && form.errorCode === 'auth/email-already-in-use'">
-                {{ form.errorMessage }}
+              <div *ngIf="form.pristine && errorCode === 'auth/email-already-in-use'">
+                {{ errorMessage }}
               </div>
             </div>
         </div>

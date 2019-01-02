@@ -10,8 +10,16 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private auth: AuthService, private router: Router) { 
+  public errorMessage: string;
+  public errorCode: string;
 
+  constructor(private auth: AuthService, private router: Router) { 
+    this.auth.getErrorMessage().subscribe(error => {
+      this.errorMessage = error;
+    });
+    this.auth.getErrorCode().subscribe(error => {
+      this.errorCode = error;
+    });
   }
 
   form = new FormGroup({
