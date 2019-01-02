@@ -45,6 +45,11 @@
               {{ errorMessage }}
             </div>
           </div>
+          <div *ngIf="form.pristine && errorCode === 'auth/user-not-found'" class="alert">
+            <div>
+              There is no user record corresponding to this email. Try a different email or create an account.
+            </div>
+          </div>
       </div>
       <div class="sign-in-button">
         <button [disabled]="!form.valid">Sign In</button>

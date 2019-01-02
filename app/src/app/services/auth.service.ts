@@ -12,7 +12,7 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  user$: Observable<firebase.User>;
+  public user$: Observable<firebase.User>;
   public test = 'Test';
 
   private errorMessageSubject = new Subject<string>();
@@ -46,7 +46,7 @@ export class AuthService {
       form.reset();
     }).catch(
       error => {
-        this.errorMessageSubject.next(error.message), this.errorCodeSubject.next(error.code), form.markAsPristine();
+        this.errorMessageSubject.next(error.message), this.errorCodeSubject.next(error.code), form.markAsPristine()
       });
   }
 
